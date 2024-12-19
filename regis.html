@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"
+        rel="stylesheet" />
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            background-color: #f1f5f8;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center">Form Registrasi Seminar</h2>
+            <form>
+                <div class="form-group row">
+                    <label for="nama" class="col-4 col-form-label">Nama Lengkap</label>
+                    <div class="col-8">
+                        <input id="nama" name="nama" type="text" required class="form-control"
+                            aria-label="Nama Lengkap">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="tempatlahir" class="col-4 col-form-label">Tempat Lahir</label>
+                    <div class="col-8">
+                        <input id="tempatlahir" name="tempatlahir" type="text" class="form-control" required
+                            aria-label="Tempat Lahir">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="datepicker" class="col-4 col-form-label">Tanggal Lahir</label>
+                    <div class="col-8">
+                        <input data-date-format="dd/mm/yyyy" id="datepicker" class="form-control"
+                            aria-label="Tanggal Lahir">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="address" class="col-4 col-form-label">Alamat</label>
+                    <div class="col-8">
+                        <input id="Alamat" name="Alamat" type="text" class="form-control" required
+                        aria-label="Alamat Lengkap">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-4">Jenis Kelamin</label>
+                    <div class="col-8">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input name="gender" id="gender_0" type="radio" class="custom-control-input"
+                                value="laki-laki" required="required">
+                            <label for="gender_0" class="custom-control-label">Laki-laki</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input name="gender" id="gender_1" type="radio" class="custom-control-input"
+                                value="perempuan" required="required">
+                            <label for="gender_1" class="custom-control-label">Perempuan</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-4 col-form-label">Email</label>
+                    <div class="col-8">
+                        <input id="email" name="email" type="email" class="form-control" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="status" class="col-4 col-form-label">Status Peserta</label>
+                    <div class="col-8">
+                        <select id="status" name="status" class="custom-select" required="required">
+                            <option value="jomblo">Jomblo</option>
+                            <option value="independen">Independen</option>
+                            <option value="menikah">Menikah</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-4">
+                        <button type="submit" class="btn btn-primary">Daftar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#datepicker').datepicker({
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+    </script>
+</body>
+
+</html>
